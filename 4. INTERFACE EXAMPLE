@@ -1,0 +1,14 @@
+interface Payment {
+    void pay(int amount);
+}
+class CreditCard implements Payment {
+    public void pay(int amount){
+        System.out.println("Paid "+amount+" using Credit Card");
+    }
+}
+public class InterfaceExample {
+    public static void main(String[] args) {
+        Payment p=new CreditCard();
+        p.pay(5000);
+    }
+}
